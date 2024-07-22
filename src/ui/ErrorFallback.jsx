@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"; // Import PropTypes for prop validation
 import styled from "styled-components";
 import Heading from "./Heading";
 import GlobalStyles from "../styles/GlobalStyles";
@@ -32,6 +33,7 @@ const Box = styled.div`
     color: var(--color-grey-500);
   }
 `;
+
 function ErrorFallback({ error, resetErrorBoundary }) {
   return (
     <>
@@ -48,5 +50,13 @@ function ErrorFallback({ error, resetErrorBoundary }) {
     </>
   );
 }
+
+// Define prop types
+ErrorFallback.propTypes = {
+  error: PropTypes.shape({
+    message: PropTypes.string.isRequired,
+  }).isRequired,
+  resetErrorBoundary: PropTypes.func.isRequired,
+};
 
 export default ErrorFallback;
