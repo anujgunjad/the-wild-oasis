@@ -18,6 +18,11 @@ function Login() {
     <LoginLayout>
       <Logo />
       <Heading as="h4">Log in to your account</Heading>
+      <div style={{background: 'white',color: 'black', padding: '10px'}}>
+        <h3>Test credential</h3>
+        <p>Email address - anuj@test.com</p>
+        <p>Password - test</p>
+      </div>
       <LoginForm />
     </LoginLayout>
   );
